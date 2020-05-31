@@ -4,13 +4,35 @@
         <servlet-name>Recibir</servlet-name>
         <servlet-class>controlador.Recibir</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>vamos</servlet-name>
+        <servlet-class>controlador.vamos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Editar</servlet-name>
+        <servlet-class>controlador.Editar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Eliminar</servlet-name>
+        <servlet-class>controlador.Eliminar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Recibir</servlet-name>
         <url-pattern>/Recibir.do</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>vamos</servlet-name>
+        <url-pattern>/vamos.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Editar</servlet-name>
+        <url-pattern>/Editar.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Eliminar</servlet-name>
+        <url-pattern>/Eliminar.do</url-pattern>
+    </servlet-mapping>
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>60</session-timeout>
     </session-config>
 </web-app>

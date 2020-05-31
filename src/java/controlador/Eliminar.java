@@ -1,28 +1,27 @@
 package controlador;
 
+import modelo.Persona;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.System.out;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Persona;
 
-@WebServlet(name = "Mostrar", urlPatterns = {"/mostrar.do"})
-public class Mostrar extends HttpServlet {
+public class Eliminar extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        Persona p=new Persona();
-        ArrayList<Persona> personas =new ArrayList();
-        personas =p.consultarRegistros();
-        
-        request.getSession().setAttribute("personas", personas);
-       request.getRequestDispatcher("mostrartodo.jsp").forward(request, response);
+        String dui = request.getParameter("Dui");
+        PrintWriter out = response.getWriter();
+        Persona p = new Persona();
+        p.setDui(dui);
+        if (p.delete()==1) {
+            request.getRequestDispatcher("exito.jsp").forward(request,response);
+        } else {
+            request.getRequestDispatcher("noexito.jsp").forward(request, response);
+        }
     }
 
     @Override

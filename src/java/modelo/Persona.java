@@ -89,4 +89,27 @@ public class Persona {
         return person;
     }
 
+    public int editarDatos() {
+        int condicion = 0;
+        String consulta = "update tb_persona set nombre_persona='" + this.nombres + "',apellido_persona='" + this.apellidos + "' where dui_persona ='" + this.dui + "';";
+        try {
+            st = cn.createStatement();
+            condicion = st.executeUpdate(consulta);
+        } catch (SQLException ex) {
+            Logger.getLogger(Persona.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return condicion;
+    }
+
+    public int delete() {
+        int condicion=0;
+        try {
+            st = cn.createStatement();
+             condicion = st.executeUpdate("delete from tb_persona where dui_persona='" + this.dui + "'");
+        } catch (SQLException ex) {
+            Logger.getLogger(Persona.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return condicion;
+    }
+
 }

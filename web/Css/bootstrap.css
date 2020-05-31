@@ -7787,14 +7787,14 @@ button.bg-dark:focus {
   z-index: 1030;
 }
 
-/*@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky-top {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
   }
-}*/
+}
 
 .sr-only {
   position: absolute;
@@ -10029,3 +10029,4 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+/*# sourceMappingURL=bootstrap.css.map */
