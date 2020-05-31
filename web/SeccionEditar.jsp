@@ -12,8 +12,8 @@
     <body>
         <nav class="bg-orange">
             <ul class="nav ">
-                <li class="nav-item m-3"><a href="index.jsp" class=" text-light nav-link"><img src="img/nuevo-usuario.svg"/>Ingresar</a></li>         
-                <li class="nav-item m-3"><a href="mostrartodo.jsp" class=" text-light nav-link"><img src="img/listed-items_icon-icons.com_53953.svg"/>Consultar</a></li>                         
+                <li class="nav-item m-3"><a href="index.jsp" class=" text-light nav-link"><img src="img/nuevo-usuario.svg" class="icon"/>Ingresar</a></li>         
+                <li class="nav-item m-3"><a href="mostrartodo.jsp" class=" text-light nav-link"><img src="img/listed-items_icon-icons.com_53953.svg" class="icon"/>Consultar</a></li>                         
             </ul>
         </nav>
         <h1 >Editar Registro</h1>
